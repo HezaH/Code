@@ -32,7 +32,7 @@ print(np.array(matriz_adjacencia))
 
 # Exibir grafo
 grafo.exibir_grafo(grafo.grafo_hcp)
-grafo.visualizar_grafo(grafo.grafo_hcp, vertices_destaque=None)
+grafo.visualizar_grafo(grafo.grafo_hcp, "Grafo" + str(len(matriz_adjacencia)), vertices_destaque=None)
 
 # Conjunto de vértices
 vertices = set()
@@ -64,7 +64,7 @@ print(np.array(matriz_adjacencia))
 
 # Exibir grafo
 grafo.exibir_grafo(grafo.grafo_hcp)
-grafo.visualizar_grafo(grafo.grafo_hcp)
+grafo.visualizar_grafo(grafo.grafo_hcp, "Grafo" + str(num_vertices))
 
 arestas = grafo.re_transformar_formatos(grafo.grafo_hcp)
 

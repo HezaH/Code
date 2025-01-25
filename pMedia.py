@@ -41,7 +41,8 @@ def pMedia(arestas, vertices, grafo, p, model_name):
             print(f"Cliente {i} é atendido pela facilidade em {j}")
 
         print(f"\nDistância total minimizada: {solucao.objective_value}")
-        grafo.visualizar_grafo(grafo.grafo_hcp, vertices_destaque=facilidades_abertas)  
+        fig_name = model_name + str(len(vertices))
+        grafo.visualizar_grafo(grafo.grafo_hcp, fig_name, vertices_destaque=facilidades_abertas)  
     else:
         print("Nenhuma solução encontrada.")
 

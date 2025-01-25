@@ -180,7 +180,7 @@ class Grafo:
                     arestas.append((origem, destino, peso))
         return arestas
     
-    def visualizar_grafo(self, grafo, vertices_destaque=None):
+    def visualizar_grafo(self, grafo, fig_name, vertices_destaque=None):
         if vertices_destaque is None:
             vertices_destaque = []
         
@@ -227,5 +227,6 @@ class Grafo:
         nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=max(6, font_size - 2))
 
         plt.title("Visualização Dinâmica do Grafo", fontsize=16)
-        plt.show()
+        plt.savefig(fig_name+".jpg", format="jpeg", dpi=300, bbox_inches='tight')
+
 

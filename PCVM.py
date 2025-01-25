@@ -24,7 +24,8 @@ def PCVM(arestas, vertices, grafo, model_name):
         print(vertices_cobertos)
         print(f"Quantidade mínima de vértices necessários: {len(vertices_cobertos)}")
         print(f"Soma total dos pesos cobertos: {solucao.objective_value}")
-        grafo.visualizar_grafo(grafo.grafo_hcp, vertices_destaque=vertices_cobertos)
+        fig_name = model_name + str(len(vertices))
+        grafo.visualizar_grafo(grafo.grafo_hcp, fig_name, vertices_destaque=vertices_cobertos)
     else:
         print("Nenhuma solução encontrada.")
     
